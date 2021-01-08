@@ -148,7 +148,16 @@ public abstract class WSDLModelerBase implements Modeler {
     }
 
     protected com.sun.tools.ws.wsdl.document.Message getInputMessage() {
-        return info.portTypeOperation.getInput().resolveMessage(info.document);
+    	com.sun.tools.ws.wsdl.document.Message input = info.portTypeOperation.getInput().resolveMessage(info.document);
+    	Documentation documentation = info.portTypeOperation.getInput().getDocumentation();
+    	if(documentation != null) {
+			input.setDocumentation(documentation);
+	    	for(MessagePart part:input.getParts()) {
+	    		part.setProperty("description", documentation.getContent());
+	    	}
+    	}
+    	
+    	return input;
     }
 
     /**

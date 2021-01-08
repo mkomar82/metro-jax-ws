@@ -162,7 +162,8 @@ public class SeiGenerator extends GeneratorBase {
 
                 //annotate parameter with JAXB annotations
                 paramType.annotate(var);
-                methodDoc.addParam(var);
+                JCommentPart commentPart = methodDoc.addParam(var);
+                commentPart.add(parameter.getParameter().getJavaDoc());
                 JAnnotationUse paramAnn = var.annotate(cm.ref(WebParam.class));
                 writeWebParam(operation, parameter, paramAnn);
             }

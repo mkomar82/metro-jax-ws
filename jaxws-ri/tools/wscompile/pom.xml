@@ -23,35 +23,36 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sun.xml.ws</groupId>
     <artifactId>wscompile</artifactId>
-    <version>2.3.3</version>
+    <version>2.3.3.sdc</version>
 
     <name>JAX-WS RI Tools (wscompile)</name>
     <description>JAX-WS RI Tools</description>
 
     <properties>
         <spotbugs.exclude>${project.basedir}/exclude.xml</spotbugs.exclude>
+        <jaxws.version>2.3.3</jaxws.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>rt</artifactId>
-            <version>${project.version}</version>
+            <version>${jaxws.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>rt-fi</artifactId>
-            <version>${project.version}</version>
+            <version>${jaxws.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>httpspi-servlet</artifactId>
-            <version>${project.version}</version>
+            <version>${jaxws.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>servlet</artifactId>
-            <version>${project.version}</version>
+            <version>${jaxws.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
@@ -385,27 +386,27 @@
                             <instructions>
                                 <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
                                 <Export-Package>
-                                    com.sun.istack;version=${project.version},
-                                    com.sun.tools.ws.ant;version=${project.version},
-                                    com.sun.tools.ws.api.wsdl;version=${project.version},
-                                    com.sun.tools.ws.processor.generator;version=${project.version},
-                                    com.sun.tools.ws.processor.model.exporter;version=${project.version},
-                                    com.sun.tools.ws.processor.model.java;version=${project.version},
-                                    com.sun.tools.ws.processor.model.jaxb;version=${project.version},
-                                    com.sun.tools.ws.processor.modeler.annotation;version=${project.version},
-                                    com.sun.tools.ws.processor.modeler.wsdl;version=${project.version},
-                                    com.sun.tools.ws.processor.util;version=${project.version},
-                                    com.sun.tools.ws.resources;version=${project.version},
-                                    com.sun.tools.ws.spi;version=${project.version},
-                                    com.sun.tools.ws.util.xml;version=${project.version},
-                                    com.sun.tools.ws.wscompile.plugin.at_generated;version=${project.version},
-                                    com.sun.tools.ws.wsdl.document.http;version=${project.version},
-                                    com.sun.tools.ws.wsdl.document.jaxws;version=${project.version},
-                                    com.sun.tools.ws.wsdl.document.mime;version=${project.version},
-                                    com.sun.tools.ws.wsdl.document.schema;version=${project.version},
-                                    com.sun.tools.ws.wsdl.document.soap;version=${project.version},
-                                    com.sun.tools.ws.wsdl.framework;version=${project.version},
-                                    com.sun.tools.ws.wsdl.parser;version=${project.version}
+                                    com.sun.istack;version=${jaxws.version},
+                                    com.sun.tools.ws.ant;version=${jaxws.version},
+                                    com.sun.tools.ws.api.wsdl;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.generator;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.model.exporter;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.model.java;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.model.jaxb;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.modeler.annotation;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.modeler.wsdl;version=${jaxws.version},
+                                    com.sun.tools.ws.processor.util;version=${jaxws.version},
+                                    com.sun.tools.ws.resources;version=${jaxws.version},
+                                    com.sun.tools.ws.spi;version=${jaxws.version},
+                                    com.sun.tools.ws.util.xml;version=${jaxws.version},
+                                    com.sun.tools.ws.wscompile.plugin.at_generated;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.document.http;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.document.jaxws;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.document.mime;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.document.schema;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.document.soap;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.framework;version=${jaxws.version},
+                                    com.sun.tools.ws.wsdl.parser;version=${jaxws.version}
                                 </Export-Package>
                                 <Import-Package>
                                     com.sun.codemodel;version=${jaxb-xjc.version},
@@ -434,27 +435,27 @@
                                     com.sun.xml.txw2;version=${jaxb-impl.version},
                                     com.sun.xml.txw2.annotation;version=${jaxb-impl.version},
                                     com.sun.xml.txw2.output;version=${jaxb-impl.version},
-                                    com.sun.xml.ws.addressing;version=${project.version},
-                                    com.sun.xml.ws.addressing.v200408;version=${project.version},
-                                    com.sun.xml.ws.api;version=${project.version},
-                                    com.sun.xml.ws.api.addressing;version=${project.version},
-                                    com.sun.xml.ws.api.databinding;version=${project.version},
-                                    com.sun.xml.ws.api.model;version=${project.version},
-                                    com.sun.xml.ws.api.server;version=${project.version},
-                                    com.sun.xml.ws.api.streaming;version=${project.version},
-                                    com.sun.xml.ws.api.wsdl.parser;version=${project.version},
-                                    com.sun.xml.ws.api.wsdl.writer;version=${project.version},
-                                    com.sun.xml.ws.binding;version=${project.version},
-                                    com.sun.xml.ws.db;version=${project.version},
-                                    com.sun.xml.ws.model;version=${project.version},
-                                    com.sun.xml.ws.policy.sourcemodel.wspolicy;version=${project.version},
-                                    com.sun.xml.ws.spi.db;version=${project.version},
-                                    com.sun.xml.ws.streaming;version=${project.version},
-                                    com.sun.xml.ws.util;version=${project.version},
-                                    com.sun.xml.ws.util.exception;version=${project.version},
-                                    com.sun.xml.ws.util.xml;version=${project.version},
-                                    com.sun.xml.ws.wsdl.parser;version=${project.version},
-                                    com.sun.xml.ws.wsdl.writer;version=${project.version},
+                                    com.sun.xml.ws.addressing;version=${jaxws.version},
+                                    com.sun.xml.ws.addressing.v200408;version=${jaxws.version},
+                                    com.sun.xml.ws.api;version=${jaxws.version},
+                                    com.sun.xml.ws.api.addressing;version=${jaxws.version},
+                                    com.sun.xml.ws.api.databinding;version=${jaxws.version},
+                                    com.sun.xml.ws.api.model;version=${jaxws.version},
+                                    com.sun.xml.ws.api.server;version=${jaxws.version},
+                                    com.sun.xml.ws.api.streaming;version=${jaxws.version},
+                                    com.sun.xml.ws.api.wsdl.parser;version=${jaxws.version},
+                                    com.sun.xml.ws.api.wsdl.writer;version=${jaxws.version},
+                                    com.sun.xml.ws.binding;version=${jaxws.version},
+                                    com.sun.xml.ws.db;version=${jaxws.version},
+                                    com.sun.xml.ws.model;version=${jaxws.version},
+                                    com.sun.xml.ws.policy.sourcemodel.wspolicy;version=${jaxws.version},
+                                    com.sun.xml.ws.spi.db;version=${jaxws.version},
+                                    com.sun.xml.ws.streaming;version=${jaxws.version},
+                                    com.sun.xml.ws.util;version=${jaxws.version},
+                                    com.sun.xml.ws.util.exception;version=${jaxws.version},
+                                    com.sun.xml.ws.util.xml;version=${jaxws.version},
+                                    com.sun.xml.ws.wsdl.parser;version=${jaxws.version},
+                                    com.sun.xml.ws.wsdl.writer;version=${jaxws.version},
                                     com.sun.xml.xsom.parser;version=${jaxb-xjc.version},
                                     javax.activation,
                                     javax.annotation.processing,

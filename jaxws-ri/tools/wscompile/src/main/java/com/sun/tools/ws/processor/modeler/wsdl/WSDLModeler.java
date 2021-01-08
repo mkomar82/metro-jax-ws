@@ -1657,6 +1657,7 @@ public class WSDLModeler extends WSDLModelerBase {
             QName reqBodyName = part.getDescriptor();
             JAXBType jaxbType = getJAXBType(part);
             Block block = new Block(reqBodyName, jaxbType, part);
+            block.setJavaDoc((String)part.getProperty("description"));
             if (unwrappable) {
                 //So build body and header blocks and set to request and response
                 JAXBStructuredType jaxbStructType = ModelerUtils.createJAXBStructureType(jaxbType);
@@ -1769,6 +1770,7 @@ public class WSDLModeler extends WSDLModelerBase {
                 }
                 Parameter param = ModelerUtils.createParameter(part.getName(), jaxbType, block);
                 param.setMode(part.getMode());
+              	param.setJavaDoc(block.getJavaDoc());
                 if (part.isReturn()) {
                     param.setParameterIndex(-1);
                 } else {
